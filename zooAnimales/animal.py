@@ -22,7 +22,7 @@ class Animal:
         from zooAnimales.reptil import Reptil
         from zooAnimales.pez import Pez
         from zooAnimales.anfibio import Anfibio
-        return str("Mamiferos:", str(Mamifero.cantidadMamiferos()), "\nAves:", str(Ave.cantidadAves()), "\nReptiles:", str(Reptil.cantidadReptiles()), "\nPeces:", str(Pez.cantidadPeces()), "\nAnfibios:", str(Anfibio.cantidadAnfibios()))
+        return "Mamiferos : {}\nAves : {}\nReptiles : {}\nPeces : {}\nAnfibios : {}".format(Mamifero.cantidadMamiferos(),Ave.cantidadAves(),Reptil.cantidadReptiles(),Pez.cantidadPeces(),Anfibio.cantidadAnfibios())
     
     '''def __str__(self):
         if self._zona == None:
@@ -32,9 +32,9 @@ class Animal:
         
     def toString(self):
         if self._zona == None:
-            return str("Mi nombre es",  self._nombre, "tengo una edad de", self._edad, "habito en", self._habitat, "y mi genero es", self._genero)
+            return "Mi nombre es {}, tengo una edad de {}, habito en {} y mi genero es {}".format(self._nombre,self._edad,self._habitat,self._genero)
         else:
-            return str("Mi nombre es",  self._nombre, "tengo una edad de", self._edad, "habito en", self._habitat, "y mi genero es", self._genero, "la zona en la que me ubico es", self._zona, "en el", self._zona.getZoo())
+            return "Mi nombre es {}, tengo una edad de {}, habito en {} y mi genero es {}, la zona en la que me ubico es {},  en el {}".format(self._nombre,self._edad,self._habitat,self._genero,self._zona,self._zona.getZoo())
 
         
     # Set and get methods
