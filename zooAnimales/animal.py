@@ -1,9 +1,3 @@
-from zooAnimales.mamifero import Mamifero
-from zooAnimales.ave import Ave
-from zooAnimales.reptil import Reptil
-from zooAnimales.pez import Pez
-from zooAnimales.anfibio import Anfibio
-
 class Animal:
     # Class atributes
     _totalAnimales=0
@@ -23,6 +17,11 @@ class Animal:
 
     @classmethod
     def totalPorTipo(self):
+        from zooAnimales.mamifero import Mamifero
+        from zooAnimales.ave import Ave
+        from zooAnimales.reptil import Reptil
+        from zooAnimales.pez import Pez
+        from zooAnimales.anfibio import Anfibio
         return "Mamiferos:", str(Mamifero.cantidadMamiferos()), "\nAves:", str(Ave.cantidadAves()), "\nReptiles:", str(Reptil.cantidadReptiles()), "\nPeces:", str(Pez.cantidadPeces()), "\nAnfibios:", str(Anfibio.cantidadAnfibios())
     
     '''def __str__(self):
